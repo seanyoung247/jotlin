@@ -1,13 +1,14 @@
 <?php
 
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Route;
 
+use Illuminate\Support\Facades\Route;
+use App\Models\Note;
 
 
 
 Route::get('/', function () {
-    $notes = DB::table('ideas')->get();
+    
+    $notes = Note::all();
 
     return view('main', [
         'notes' => $notes
@@ -15,15 +16,11 @@ Route::get('/', function () {
 });
 
 
-
-
 Route::post('/new-note', function() {
-    $note = (object) [
+    Note::create([
         'title' => request('note-title'),
-        'text' => request('note-text')
-    ];
-
-    session()->push('notes', $note);
+        'note' => request('note-text')
+    ]);
 
     return redirect('/');
 });
