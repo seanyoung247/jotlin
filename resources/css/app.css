@@ -7,3 +7,23 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+
+body {
+    background: #222;
+    color: #DDD;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.card {
+    background: #333;
+    border-radius: 1rem;
+    box-shadow: 0 0 5px black;
+}
+
+.max-width-400 {
+    max-width: 400px;
+}
