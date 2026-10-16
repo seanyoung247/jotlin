@@ -26,8 +26,18 @@
     <!-- Existing Notes -->
     @forelse ($notes as $note)
         <x-card class="note-card">
-            <h3>{{ $note['title'] }}</h3>
-            <p>{{ $note['note'] }}</p>
+            <article>
+                <header>
+                    <h3>{{ $note['title'] }}</h3>
+                    <div class="toolbar">
+                        <button class="edit">&#9998;</button>
+                        <button class="complete">&#10004;</button>
+                        <button class="delete">&#10007;</button>
+                    </div>
+                </header>
+                <p>{{ $note['note'] }}</p>
+                {{ $note['id'] }}
+            </article>
         </x-card>
     @empty
         <p>No Notes</p>
