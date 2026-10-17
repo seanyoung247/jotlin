@@ -5,16 +5,22 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Note;
 
 
-
-Route::get('/notes', function () {
-    
+$noteIdx = function () {
     $notes = Note::all();
 
     return view('notes.index', [
         'notes' => $notes
     ]);
-});
+};
 
+Route::get('/', $noteIdx);
+Route::get('/notes', $noteIdx);
+
+Route::get('/notes/{note}', function (Note $note) {
+    return view('notes.note', [
+        'note' => $note
+    ]);
+});
 
 Route::post('/notes', function() {
     Note::create([
