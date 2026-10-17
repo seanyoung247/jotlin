@@ -13,6 +13,8 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body>
+
+        <a href="/"><h1>Jotlin</h1></a>
         
         {{ $slot }}
 

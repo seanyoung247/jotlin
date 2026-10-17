@@ -2,8 +2,6 @@
 
 <x-layout>
 
-    <h1>Jotlin</h1>
-    
     <main id="note">
         <x-card class="note-card large">
             <x-edit
@@ -14,4 +12,5 @@
         </x-card>
     </main>
 
+    <a href="/">Back</a>
 </x-layout>

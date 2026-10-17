@@ -1,8 +1,6 @@
 
 <x-layout>
 
-    <h1>Jotlin</h1>
-
     <div class="add-note">
         <details  @if($notes->isEmpty()) open @endif>
             <summary>Add Note</summary>
