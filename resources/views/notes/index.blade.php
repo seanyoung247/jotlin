@@ -3,10 +3,12 @@
 
     <h1>Jotlin</h1>
 
-    <details class="add-note">
-        <summary>Add Note</summary>
-        <x-edit></x-edit>
-    </details>
+    <div class="add-note">
+        <details>
+            <summary>Add Note</summary>
+            <x-edit></x-edit>
+        </details>
+    </div>
 
     <section id="notes" class="card-grid">
     
