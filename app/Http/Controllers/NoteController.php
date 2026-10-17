@@ -24,6 +24,11 @@ class NoteController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'note-title' => ['required'],
+            'note-text' => ['required']
+        ]);
+
         Note::create([
             'title' => $request['note-title'],
             'note' => $request['note-text']

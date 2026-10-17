@@ -15,8 +15,6 @@ body {
     align-items: center;
     gap: 1rem;
 
-    font-family: var(--font-sans);
-
     background: #222;
     color: #DDD;
 }
