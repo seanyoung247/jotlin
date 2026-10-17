@@ -1,0 +1,30 @@
+
+@props([
+    'title' => '',
+    'note' => '',
+    'id' => null,
+])
+
+<form method="POST" action="/notes{{ $id ? '/' . $id : null }}"
+    {{ $attributes->merge(['class' => 'new-note-form']) }}
+>
+    @csrf
+    @unless ($id)
+        @method("patch")
+    @endunless
+
+    <label for="new-note-title">Title</label>
+    <input type="text" 
+        name="note-title" 
+        id="new-note-title"
+        value="{{ $title }}"
+        required
+    >
+    <label for="new-note-text">Note</label>
+    <textarea 
+        name="note-text"
+        id="new-note-text"
+        required
+    >{{ $note }}</textarea>
+    <input type="submit" value="Save" />
+</form>
