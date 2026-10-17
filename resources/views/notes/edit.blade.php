@@ -12,5 +12,4 @@
         </x-card>
     </main>
 
-    <a href="/">Back</a>
 </x-layout>

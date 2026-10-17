@@ -51,10 +51,8 @@ Route::post('/notes', function() {
     return redirect('/notes');
 });
 
-
-
-Route::get('/delete-notes', function() {
-    Idea::truncate();
-    return redirect('/notes');
+// Delete
+Route::delete('/notes/{note}', function (Note $note) {
+    $note->delete();
+    return redirect('/notes');   
 });
-

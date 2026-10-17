@@ -15,6 +15,8 @@ body {
     align-items: center;
     gap: 1rem;
 
+    font-family: var(--font-sans);
+
     background: #222;
     color: #DDD;
 }
@@ -90,10 +92,11 @@ h1 {
         & > .toolbar {
             display: flex;
         
-            & > a {
+            & > :is(a, input) {
                 text-decoration: none;
                 color: white;
                 transition: 0.25s color;
+                cursor: pointer;
             &:hover {
                 color: var(--highlight);
             }

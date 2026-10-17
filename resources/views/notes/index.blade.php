@@ -15,7 +15,6 @@
                 <x-note :note="$note"></x-note>
             </x-card>
         @empty
-            <p>No Notes</p>
         @endforelse
 
     </section>
