@@ -6,29 +6,29 @@ use App\Models\Note;
 
 
 
-Route::get('/', function () {
+Route::get('/notes', function () {
     
     $notes = Note::all();
 
-    return view('main', [
+    return view('notes.index', [
         'notes' => $notes
     ]);
 });
 
 
-Route::post('/new-note', function() {
+Route::post('/notes', function() {
     Note::create([
         'title' => request('note-title'),
         'note' => request('note-text')
     ]);
 
-    return redirect('/');
+    return redirect('/notes');
 });
 
 
 
 Route::get('/delete-notes', function() {
-    session()->forget('notes');
-    return redirect('/');
+    Idea::truncate();
+    return redirect('/notes');
 });
 
