@@ -9,9 +9,9 @@
     {{ $attributes->merge(['class' => 'new-note-form']) }}
 >
     @csrf
-    @unless ($id)
+    @if ($id)
         @method("patch")
-    @endunless
+    @endif
 
     <label for="new-note-title">Title</label>
     <input type="text" 
