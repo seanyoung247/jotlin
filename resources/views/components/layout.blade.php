@@ -14,7 +14,7 @@
     </head>
     <body>
 
-        <a href="/"><h1>Jotlin</h1></a>
+        <x-nav></x-nav>
         
         {{ $slot }}
 

@@ -19,8 +19,27 @@ body {
     color: #DDD;
 }
 
-h1 {
-    font-size: 2rem;
+#topbar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+
+    padding: 1rem;
+
+    & > h1 {
+        font-size: 2rem;
+    }
+
+    & > nav > ul {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 0.5rem;
+
+        & > li > a:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 .add-note {
@@ -133,23 +152,26 @@ main#note {
 }
 
 .button {
-        align-self: end;
-        background: #005555;
-        max-width: 200px;
-        width: 100%;
+    border: 1px solid white;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    align-self: end;
+    background: #005555;
+    max-width: 200px;
+    width: 100%;
     padding-bottom: 0.6rem;
-        transition:
+    transition:
         0.25s padding-bottom,
         0.25s padding-top,
-            0.25s background,
-            0.25s box-shadow,
-            0.25s border;
-        &:hover {
-            background: #008888;
+        0.25s background,
+        0.25s box-shadow,
+        0.25s border;
+    &:hover {
+        background: #008888;
         /* box-shadow: 0 0 5px 2px #008888; */
         box-shadow: inset 0 0 5px 2px #888888;
-        }
-        &:active {
+    }
+    &:active {
         border: 1px solid #888;
         box-shadow: inset 0 0 2px 2px #002222;
         padding-bottom: 0.5rem;
