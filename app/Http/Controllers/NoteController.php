@@ -53,6 +53,11 @@ class NoteController extends Controller
      */
     public function update(Request $request, Note $note)
     {
+        $request->validate([
+            'note-title' => ['required'],
+            'note-text' => ['required']
+        ]);
+
         $note->update([
             'title' => $request['note-title'],
             'note' => $request['note-text']

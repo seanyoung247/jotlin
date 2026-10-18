@@ -6,7 +6,7 @@
 ])
 
 <form method="POST" action="/notes{{ $id ? '/' . $id : null }}"
-    {{ $attributes->merge(['class' => 'new-note-form']) }}
+    {{ $attributes->merge(['class' => 'input-form']) }}
 >
     @csrf
     @if ($id)
@@ -26,5 +26,5 @@
         id="new-note-text"
         required
     >{{ $note }}</textarea>
-    <input type="submit" value="Save" />
+    <input class="button" type="submit" value="Save" />
 </form>

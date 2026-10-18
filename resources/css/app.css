@@ -115,7 +115,7 @@ main#note {
     height: calc(100dvh - 4rem);
 }
 
-.new-note-form {
+.input-form {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -130,22 +130,29 @@ main#note {
         flex: 1 1 auto;
         resize: vertical;
     }
-    & > input[type="submit"] {
+}
+
+.button {
         align-self: end;
         background: #005555;
         max-width: 200px;
         width: 100%;
+    padding-bottom: 0.6rem;
         transition:
+        0.25s padding-bottom,
+        0.25s padding-top,
             0.25s background,
             0.25s box-shadow,
             0.25s border;
         &:hover {
             background: #008888;
-            box-shadow: 0 0 5px 2px #008888;
+        /* box-shadow: 0 0 5px 2px #008888; */
+        box-shadow: inset 0 0 5px 2px #888888;
         }
         &:active {
-            border: 1px solid #880000;
-            box-shadow: inset 0 0 5px 2px #002222;
-        }
+        border: 1px solid #888;
+        box-shadow: inset 0 0 2px 2px #002222;
+        padding-bottom: 0.5rem;
+        padding-top: 0.6rem;
     }
 }
