@@ -32,7 +32,7 @@ class UserController extends Controller
         ]);
 
         Auth::login($user);
-        // $request->session()->regenerate();
+        $request->session()->regenerate();
 
         return redirect('/notes');
     }

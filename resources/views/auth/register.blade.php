@@ -4,7 +4,7 @@
     <div id="register-form">
         <form method="POST" action="/register" class="input-form">
             <h2>Register</h2>
-            
+
             @csrf
 
             <label for="name">Name</label>
@@ -16,7 +16,7 @@
             <label for="password">Password</label>
             <input type="password" name="password" id="user-password-input" required>
 
-            <input type="submit" value="Register" class="button">
+            <input type="submit" value="Register" class="btn">
 
         </form>
     <div>

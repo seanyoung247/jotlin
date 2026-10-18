@@ -38,13 +38,13 @@ body {
         font-size: 2rem;
     }
 
-    & > nav > ul {
+    & > nav ul {
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
         gap: 1rem;
 
-        & > li > a:hover {
+        & > li > a:not(.btn):hover {
             text-decoration: underline;
         }
     }
@@ -209,4 +209,12 @@ main#note {
         padding-bottom: 0.5rem;
         padding-top: 0.6rem;
     }
+    &.usr-btn {
+        min-width: 5.5rem;
+        text-align: center;
+    }
+}
+
+p.error {
+    color: red;
 }
