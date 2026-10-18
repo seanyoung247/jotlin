@@ -8,6 +8,11 @@
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     display: flex;
@@ -17,12 +22,14 @@ body {
 
     background: #222;
     color: #DDD;
+    min-height: 100dvh;
 }
 
 #topbar {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
 
     padding: 1rem;
@@ -34,7 +41,8 @@ body {
     & > nav > ul {
         display: flex;
         flex-flow: row nowrap;
-        gap: 0.5rem;
+        align-items: center;
+        gap: 1rem;
 
         & > li > a:hover {
             text-decoration: underline;
@@ -151,7 +159,31 @@ main#note {
     }
 }
 
-.button {
+#register-form {
+    flex: 1 1 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    & h2 {
+        font-size: 1.25rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    & > form {
+        padding: 1em;
+        background: #191919;
+        max-width: 800px;
+        min-height: 0px;
+        border: 1px solid white;
+        border-radius: 0.5rem;
+    }
+}
+
+.btn {
+    display: inline-block;
     border: 1px solid white;
     border-radius: 0.5rem;
     padding: 0.5rem;

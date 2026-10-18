@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\SessionController;
 use App\Http\Controllers\Auth\UserController;
 use App\Http\Controllers\NoteController;
 use Illuminate\Support\Facades\Route;
@@ -17,3 +18,5 @@ Route::delete('/notes/{note}', [NoteController::class, 'destroy']);
 
 Route::get('/register', [UserController::class, 'create']);
 Route::post('/register', [UserController::class, 'store']);
+
+Route::post('/logout', [SessionController::class, 'destroy']);

@@ -26,5 +26,5 @@
         id="new-note-text"
         required
     >{{ $note }}</textarea>
-    <input class="button" type="submit" value="Save" />
+    <input class="btn" type="submit" value="Save" />
 </form>
